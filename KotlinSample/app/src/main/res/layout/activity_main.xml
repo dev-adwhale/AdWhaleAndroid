@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/bannertx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="배너 타입 선택"
+        android:layout_centerHorizontal="true"
+        />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/bannertx"
+        />
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/banner_btn1"
+        android:text="Request Banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner"
+        />
+
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/interstitial_btn1"
+        android:text="Request Interstitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/banner_btn1"/>
+
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/rewarded_btn1"
+        android:text="Request Reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/interstitial_btn1"/>
+
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/rewarded_btn1"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:hint="가로"
+        />
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/edit1"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:hint="세로"
+        />
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/native_btn1"
+        android:text="Request Native"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edit2"/>
+
+    <!--    <Button-->
+    <!--        android:visibility=""-->
+    <!--        android:text="Banner Loop Test"-->
+    <!--        android:id="@+id/bannerlooptest"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/native_btn1"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        />-->
+    <Button
+        android:layout_marginTop="2dp"
+        android:id="@+id/test_btn1"
+        android:text="Test Ad inspector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/native_btn1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_btn1"
+        android:gravity="center">
+        <Button
+            android:visibility="gone"
+            android:id="@+id/gdpr_reset"
+            android:text="GDPR 리셋"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            />
+        <Button
+            android:visibility="visible"
+            android:id="@+id/gdpr_check"
+            android:text="GDPR 상태 확인"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            />
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/test_btn1"
+        />
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <!--xml로 AdWhaleAdView 구현 시 -->
+    <!--    <kr.co.adwhale.sdk.core.cauly.AdWhaleAdView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:adSize="BANNER"/>-->
+    <!--xml로 AdWhaleAdView 구현 시 -->
+
+</RelativeLayout>
